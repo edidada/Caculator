@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #define MaxLen 10000 //文本的最大值
 
@@ -20,7 +21,7 @@ typedef struct id {
 	int type;   //标识符类型
 	float value;//标识符的值
 	int type_float; //变量数据类型
-	id *next; //链表指针
+	struct id *next; //链表指针
 }Token;
 
 Token *head = NULL, *rear = NULL, *pre = NULL, *current = NULL, *current1 = NULL; //对存储标识符的链表的操作
